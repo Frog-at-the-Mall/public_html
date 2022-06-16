@@ -1,0 +1,17 @@
+
+                            
+# generated files
+bin/
+gen/
+                            
+# Local configuration file (sdk path, etc)
+local.properties
+                        
+
+                
+# OSX files
+.DS_Store
+*.DS_Store
+.htacces*
+._index.html
+.well-known
