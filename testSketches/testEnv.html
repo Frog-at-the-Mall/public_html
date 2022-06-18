@@ -1,5 +1,4 @@
-<html>
-
+<html style="background-color: #D9D9CF">
 <head>  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,43 +15,47 @@
  
   <!--p5 cdn-->
   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-  <script src="sketchInstancing.js"></script>
+  <script src="testSketch.js"></script>
 	  
 </head>
 
          
 
-  <body style="background-color: #D9D9CF">
-    
-    
-      <!--Navigation bar-->
-      <div id="nav-placeholder">
-      
-      </div>
-      
-          <script>
-              $(function(){
-              $("#nav-placeholder").load("nav.html");
-              });
-          </script>
-          <!--end of Navigation bar-->
-      
+<body style="background-color: #D9D9CF">
      
+  <!--Navigation bar--------------------------------->
+    <div id="nav-placeholder">
+    
+    </div>  
+    <script>
+      $(function(){
+       $("#nav-placeholder").load("../nav.html");
+      });
+    </script>
+<!--end of Navigation bar--------------------------->
+    
+
+  <main id="flexbox">
+  </main>
 
 
-    <main>
-    </main>
 
 
-    <div class="container-flex" style="background-color: #D9D9CF">
-        <footer class="bg- text-center text-lg-start" style="background-color: #D9D9CF ">
-          <!-- Copyright -->
-          <div class="text-center p-3" style="background-color: #D9D9CF">
-            © 2022 Copyright:
-            <a class="text-light" href="https://mattfrye.space/">mattFrye</a>
-          </div>
-          <!-- Copyright -->
-        </footer>
-      </div>
-  </body>
+<!--Footer bar--------------------------------->
+
+  <div id="footer-placeholder">
+
+  </div>
+      
+  <script>
+    $(function(){
+      $("#footer-placeholder").load("../footer.html");
+    });
+  </script>
+
+<!--end of Footer bar--------------------------------->
+
+
+</body>
+
 </html>

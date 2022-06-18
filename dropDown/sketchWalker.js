@@ -6,6 +6,7 @@ frame = 1;
 
 function setup() {
   createCanvas(windowWidth, windowHeight - windowHeight*.2);
+  
   //populate list of walkers -> groups of 3
   for(let i = 0; i < 20; i++){
     troop[i] = new Walkers(10 ,10,10,10);
