@@ -6,12 +6,13 @@ frame = 1;
 
 function setup() {
   createCanvas(windowWidth, windowHeight - windowHeight*.2);
+  frameRate(30);
   
   //populate list of walkers -> groups of 3
   for(let i = 0; i < 20; i++){
     troop[i] = new Walkers(10 ,10,10,10);
   }
-  background(127);
+  background("#D9D9CF");
 }
 
 function draw() {
@@ -62,10 +63,17 @@ class Walkers{
   render(){
     
     stroke(0);
-    fill(random(140,150),random(1,10),random(0,240));
+    fill(random(1,150),random(1,100),random(110));
+    rect(this.x +random(windowWidth/8) ,this.y+random(windowHeight),this.sizeX +random(100),this.sizeY+random(12));
+    fill(random(1,150),random(1,100),random(110));
+    rect(this.x +random(windowWidth/4 ) ,this.y+random(windowHeight),this.sizeX +random(100),this.sizeY+random(12));
+    fill(random(1,150),random(1,100),random(110));
+    rect(this.x +random(windowWidth/2) ,this.y+random(windowHeight),this.sizeX +random(100),this.sizeY+random(12));
+    fill(random(1,150),random(1,100),random(110));
+    rect(this.x +random(windowWidth) ,this.y+random(windowHeight),this.sizeX +random(100),this.sizeY+random(12));
+
     
-    rect(this.x +random(windowWidth) ,this.y+random(windowHeight),this.sizeX +random(1000),this.sizeY+random(1));
-    
+
     
 
   }

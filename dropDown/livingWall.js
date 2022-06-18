@@ -40,7 +40,6 @@ let sketch1 = function(p) {
     }
 
     p.draw = function(){
-        p.fill(p.random(255),p.random(20),p.random(100));
         p.noStroke();
         p.ellipse(p.x,p.y,p.random(1,3),1);
         p.rect(p.x+4,p.y+4,4,4);
@@ -80,7 +79,6 @@ let sketch2 = function(p){
 
     }
     p.draw = function(){
-        p.fill(p.random(360),p.random(200),p.random(100));
         p.noStroke();
         p.ellipse(p.x,p.y,p.random(1,3),1);
         p.rect(p.x+4,p.y+4,4,4);        
@@ -110,6 +108,10 @@ let sketch2 = function(p){
     }
 
 };
+
+let sketch3 = function(p){
+    
+}
 
 
 
