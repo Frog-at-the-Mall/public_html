@@ -1,17 +1,6 @@
-
-                            
-# generated files
-bin/
-gen/
-                            
-# Local configuration file (sdk path, etc)
-local.properties
-                        
-
-                
-# OSX files
+.well-known/.DS_Store
+.well-known/pki-validation/ca3-9573f7edc00e445f98f665ba2abd3dd9.txt
 .DS_Store
-*.DS_Store
-.htacces*
-._index.html
-.well-known
+.htaccess.phpupgrader.initial
+.htaccess.phpupgrader.ef6a50fe
+.htaccess

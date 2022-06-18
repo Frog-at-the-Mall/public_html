@@ -20,6 +20,7 @@ function draw(){
 
 }
 
+
 function createGrid(size){    
   for (var x = 0; x < width; x += width / size) {
     for (var y = 0; y < height; y += height / size) {

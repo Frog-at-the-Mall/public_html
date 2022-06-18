@@ -17,6 +17,7 @@ function setup() {
 
 function draw() {
   background(160);
+  
 
   // Set the gap between letters and the left and top margin
   let gap = 52;

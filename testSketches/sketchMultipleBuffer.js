@@ -21,6 +21,7 @@ function draw() {
     image(rightBuffer, windowWidth/2, 0);
 }
 
+
 function drawLeftBuffer() {
     leftBuffer.background("#A9D9F");
     leftBuffer.fill(255, 255, 255);

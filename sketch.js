@@ -18,6 +18,8 @@ function setup() {
 
   }
   
+
+  
 function draw() {
     //RED
      if(random(1) < 1 && random(1) > 0.8){

@@ -19,6 +19,7 @@ class generate{
     
 };
 
+
 function windowResized(){
     resizeCanvas(windowWidth, windowHeight);
   }

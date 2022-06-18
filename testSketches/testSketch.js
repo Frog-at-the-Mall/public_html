@@ -8,6 +8,7 @@ function setup() {
   }
 }
 
+
 function draw() {
   background(127);
   let index = floor(random(total));

@@ -19,6 +19,7 @@ function setup() {
     ynoise = random(1);
 
     translate(2, 2, 0);
+    
 
     for ( y = -(height/8); y <= (height/8); y+=3) {
      ynoise += 0.02;
