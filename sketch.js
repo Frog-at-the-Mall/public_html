@@ -6,6 +6,7 @@ let blackStroke = 0;
 let whiteStroke = 255;
 var canvas;
 
+
 let myColors = ["#579DE3", "#EC6152", "#D9D9CF"];
 let randCol;
 
@@ -21,6 +22,9 @@ function setup() {
 
   
 function draw() {
+
+    stroke(1);
+    line(0,(windowHeight/2), windowWidth,windowHeight/2);
     //RED
      if(random(1) < 1 && random(1) > 0.8){
          

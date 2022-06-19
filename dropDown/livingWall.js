@@ -1,6 +1,8 @@
 let g;
 let windowWidth;
 let windowHeight;
+let inconsolata;
+
   
     // Use html() function    
     
@@ -27,22 +29,34 @@ function windowResized(){
 //first sketch instance
 let sketch1 = function(p) {
     //starts on
+
     p.x = p.windowWidth/2;
     p.y = p.windowHeight/2;
+    p.s1 = 'living';
     p.bgColor = "#D9D9CF";
 
+   p.preload = function(){
+        p.inconsolata = p.loadFont('assets/Akira Expanded Demo.otf');
+      }
+    
+
+
     p.setup = function(){
-      p.createCanvas(p.windowWidth/8, p.windowHeight/8);
-      //
+      p.createCanvas(p.windowWidth/8, p.windowHeight/8,p.WEBGL);
       p.background(40,42,42);
       
       
     }
 
     p.draw = function(){
+        
+        p.fill(p.y);
+        p.text(p.s1, 10, 10, 70, 80);
         p.noStroke();
+        p.fill(p.random(100),p.random(10,70),p.random(20),255);
         p.ellipse(p.x,p.y,p.random(1,3),1);
         p.rect(p.x+4,p.y+4,4,4);
+       
 
         //move around
         p.x = p.x + p.random(-4,4);
@@ -70,16 +84,22 @@ let sketch2 = function(p){
 
     p.x = p.windowWidth/2;
     p.y = p.windowHeight/2;
+    p.s1 = 'Wall';
     p.step = 0;
 
     p.setup = function(){
-        p.createCanvas(p.windowWidth/8, p.windowHeight/8);
+        p.createCanvas(p.windowWidth/8, p.windowHeight/8,p.WEBGL);
         p.background(p.random(40));
 
 
     }
     p.draw = function(){
+        p.fill(50);
+        p.text(p.s1, 10, 58, 70, 80);
         p.noStroke();
+        p.fill(p.random(100),p.random(10,40),p.random(20));
+        p.noStroke();
+        p.fill(p.random(1,100),p.random(100),p.random(100));
         p.ellipse(p.x,p.y,p.random(1,3),1);
         p.rect(p.x+4,p.y+4,4,4);        
         p.step += 1;
