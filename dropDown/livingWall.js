@@ -2,7 +2,34 @@ let g;
 let windowWidth;
 let windowHeight;
 let inconsolata;
-
+let font,fontsize = 40;
+let names = ["Ajay",
+    "Alaine",
+    "Alameda",
+    "Alana",
+    "Alanah",
+    "Alane",
+    "Alanna",
+    "Alayne",
+    "Alberta",
+    "Albertina",
+    "Albertine",
+    "Albina",
+    "Alecia",
+    "Aleda",
+    "Aleece",
+    "Aleen",
+    "Alejandra",
+    "Alejandrina",
+    "Alena",
+    "Alene",
+    "Alessandra",
+    "Aleta",
+    "Alethea",
+    "Alex",
+    "Alexa",
+    "Alexandra"];
+let i = 0;
   
     // Use html() function    
     
@@ -32,17 +59,16 @@ let sketch1 = function(p) {
 
     p.x = p.windowWidth/2;
     p.y = p.windowHeight/2;
-    p.s1 = 'living';
+    p.s1 = [names[i]];
     p.bgColor = "#D9D9CF";
-
+    i++;
    p.preload = function(){
-        p.inconsolata = p.loadFont('assets/Akira Expanded Demo.otf');
       }
     
 
 
     p.setup = function(){
-      p.createCanvas(p.windowWidth/8, p.windowHeight/8,p.WEBGL);
+      p.createCanvas(p.windowWidth/8, p.windowHeight/8);
       p.background(40,42,42);
       
       
@@ -84,11 +110,11 @@ let sketch2 = function(p){
 
     p.x = p.windowWidth/2;
     p.y = p.windowHeight/2;
-    p.s1 = 'Wall';
+    p.s1 =[names[i]];;
     p.step = 0;
 
     p.setup = function(){
-        p.createCanvas(p.windowWidth/8, p.windowHeight/8,p.WEBGL);
+        p.createCanvas(p.windowWidth/8, p.windowHeight/8);
         p.background(p.random(40));
 
 

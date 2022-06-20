@@ -8,6 +8,7 @@ var canvas;
 
 
 let myColors = ["#579DE3", "#EC6152", "#D9D9CF"];
+let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 let randCol;
 
 function setup() {
@@ -40,6 +41,9 @@ function draw() {
          
          
          line(x ,y , windowWidth, windowHeight)
+
+         textSize(random(12,64));
+         text('mfx', x, y);
          
      }
      
@@ -55,6 +59,10 @@ function draw() {
 
         line(x,windowHeight, windowWidth, y);
 
+        textSize(random(12,64));
+        text('mfx', windowWidth - x , windowHeight/spacing*random(1,50));
+
+
     }
     else if(random(1) < 0.3){
         
@@ -67,7 +75,9 @@ function draw() {
 
         line(x ,windowHeight , windowWidth, y)
 
-        
+        textSize(random(12,64));
+        text('mfx', windowWidth - x , windowHeight/spacing*random(1,50));
+
     }
 
      //blue?
@@ -81,6 +91,10 @@ function draw() {
 
          stroke(x);
          line(x ,y , windowWidth, windowHeight)
+
+         textSize(random(12,64));
+        text('mfx', windowWidth - x , windowHeight/spacing*random(1,50));
+         
 
 
      }
