@@ -42,8 +42,7 @@ function draw() {
          
          line(x ,y , windowWidth, windowHeight)
 
-         textSize(random(12,64));
-         text('mfx', x, y);
+        
          
      }
      
@@ -59,8 +58,7 @@ function draw() {
 
         line(x,windowHeight, windowWidth, y);
 
-        textSize(random(12,64));
-        text('mfx', windowWidth - x , windowHeight/spacing*random(1,50));
+        
 
 
     }
@@ -75,9 +73,7 @@ function draw() {
 
         line(x ,windowHeight , windowWidth, y)
 
-        textSize(random(12,64));
-        text('mfx', windowWidth - x , windowHeight/spacing*random(1,50));
-
+       
     }
 
      //blue?
@@ -92,8 +88,7 @@ function draw() {
          stroke(x);
          line(x ,y , windowWidth, windowHeight)
 
-         textSize(random(12,64));
-        text('mfx', windowWidth - x , windowHeight/spacing*random(1,50));
+        
          
 
 
