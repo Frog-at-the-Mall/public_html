@@ -1,26 +1,27 @@
 
-
+let walkers1 = [];
+let walkers2 = [];
 
 
 function setup() {
-  createCanvas(640, 360);
-  background(127);
-  walker = new gaussWalker();
+  createCanvas(windowWidth, windowHeight*.8);
+  background("#D9D9CF");
+  
+  for (let i = 0; i < 50; i++) {
+    walkers1.push(new perlinWalker());
+    walkers2.push(new gaussWalker());
+  }
 }
 
 function draw() {
-  // // Get a gaussian random number w/ mean of 0 and standard deviation of 1.0
-  // let xloc = randomGaussian();
 
-  // const sd = 60; // Define a standard deviation
-  // const mean = width / 2; // Define a mean value (middle of the screen along the x-axis)
-  // xloc = xloc * sd + mean; // Scale the gaussian random number by standard deviation and mean
-
-  // fill(0, 10);
-  // noStroke();
-  // ellipse(xloc, height / 2, 16, 16); // Draw an ellipse at our "normal" random position
-  walker.render();
-  walker.step();
+  for (let i = 0; i < walkers1.length; i++) {
+    walkers1[i].render();
+    walkers1[i].step();
+    walkers2[i].render();
+    walkers2[i].step();
+  }
+  
 }
 
 function windowResized() {
@@ -36,21 +37,57 @@ class gaussWalker{
   this.meanY = height/2;
   this.xloc = this.xloc * this.sd + this.mean; // Scale the gaussian random number by standard deviation and mean
   this.yloc = this.yloc * this.sd + this.meanY;
-  ; // Draw an ellipse at our "normal" random position
+  ;// Draw an ellipse at our "normal" random position
 
   }
   render(){
 
-    fill(0, 10);
+    fill(randomGaussian(100,40),randomGaussian(155,40),randomGaussian(200,40) );
     noStroke();
-    ellipse(this.xloc, this.yloc, 16, 16)
+    rect(this.xloc, this.yloc, random(1,250), random(1,10));
 
   }
   step(){
     
     this.xloc = randomGaussian(this.mean,this.sd);
     this.yloc = randomGaussian(this.meanY,this.sd);
+    translate(0, 0, 0);
   }
 
+}
 
+class perlinWalker{
+  
+  constructor(){
+    this.tx = 0;
+    this.ty =1000;
+    
+  }
+  render(){
+    fill(255);
+    this.nx = noise(this.tx);
+    this.ny = noise(this.ty);
+    this.mx = map(this.nx,0,1,0,windowWidth);
+    this.my = map(this.ny,0,1,0,windowHeight);
+
+    if(this.mx > windowWidth || this.my > windowHeight ){
+        this.mx = 0;
+        this.my = 1000;
+    }
+    else{
+      fill(randomGaussian(100,this.mx),randomGaussian(155,this.my),randomGaussian(200,40) );
+      rect(this.mx, this.my, random(1,250), random(1,10));
+    }
+    
+    
+
+  }
+  step(){
+
+    
+    
+    this.tx += 0.01;
+    this.ty +=0.01;
+
+  }
 }
