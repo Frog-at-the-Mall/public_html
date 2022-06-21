@@ -3,18 +3,22 @@ let walkers1 = [];
 let walkers2 = [];
 
 
+
 function setup() {
-  createCanvas(windowWidth, windowHeight*.8);
+  createCanvas(windowWidth, windowHeight -windowHeight*.12);
   background("#D9D9CF");
-  
+  perlin = new perlin2D();
+  perlin.render();
   for (let i = 0; i < 50; i++) {
     walkers1.push(new perlinWalker());
     walkers2.push(new gaussWalker());
   }
+  
 }
 
 function draw() {
 
+  
   for (let i = 0; i < walkers1.length; i++) {
     walkers1[i].render();
     walkers1[i].step();
@@ -44,7 +48,7 @@ class gaussWalker{
 
     fill(randomGaussian(100,40),randomGaussian(155,40),randomGaussian(200,40) );
     noStroke();
-    rect(this.xloc, this.yloc, random(1,250), random(1,10));
+    rect(this.xloc, this.yloc, random(1,50), random(1,10));
 
   }
   step(){
@@ -88,6 +92,21 @@ class perlinWalker{
     
     this.tx += 0.01;
     this.ty +=0.01;
+
+  }
+}
+
+class perlin2D{
+  constructor(){
+
+    
+  }
+
+  render(){
+    
+
+  }
+  step(){
 
   }
 }
