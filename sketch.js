@@ -19,7 +19,9 @@ function setup() {
     frameRate(30);
 
   }
-  
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
 
   
 function draw() {

@@ -49,7 +49,7 @@ class generate{
 };
 
 
-function windowResized(){
+function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
   }
 
@@ -73,6 +73,7 @@ let sketch1 = function(p) {
       
       
     }
+    
 
     p.draw = function(){
         
