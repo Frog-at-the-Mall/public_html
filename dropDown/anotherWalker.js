@@ -15,14 +15,16 @@ function setup(){
     createCanvas(windowWidth, windowHeight - windowHeight*.15);
     frameRate(30);
     background("#D9D9CF");
+    noCursor();
 
     sC = new squareClass();
     cC = new circleClass();
     tcC = new translateCubeClass();
+    qC = new quadClass();
 }
 
 function draw(){
-//    background("#D9D9CF");
+  background("#D9D9CF");
    
    sC.step();
    sC.render();
@@ -30,6 +32,9 @@ function draw(){
    cC.render();
 
    tcC.render();
+   qC.render();
+
+
 
    x = x + xSpeed;
    y = y + ySpeed;
@@ -44,6 +49,15 @@ function draw(){
   stroke(0);
    fill(175);
    ellipse(x,y,16,16);
+
+
+   let v1 = createVector(40, 50);
+let v2 = createVector(40, 50);
+
+ellipse(v1.x, v1.y, 50, 50);
+ellipse(v2.x, v2.y, 50, 50);
+v1.add(v2);
+ellipse(v1.x, v1.y, 50, 50);
 }
 
 class squareClass{
@@ -118,5 +132,20 @@ class circleVector{
     constructor(){
         this.location = width/2;
         this.speed = 1;
+    }
+}
+
+class quadClass{
+    constructor(){
+        this.x = width/2;
+        this.y = height/2;
+        
+    }
+    render(){
+        noFill();
+        quad(random(width), random(height), random(width), random(height), random(width), random(height), random(width), random(height));
+    }
+    step(){
+
     }
 }
